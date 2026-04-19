@@ -2,7 +2,7 @@
 
 Backend-сервис на FastAPI с MySQL, nginx и Docker Compose.
 
-## Стек
+## ⚙️ Стек
 - Python / FastAPI
 - MySQL
 - Docker / Docker Compose
@@ -16,6 +16,6 @@ Backend-сервис на FastAPI с MySQL, nginx и Docker Compose.
 - проксируется через nginx
 - умеет балансировать между app1/app2/app3
 
-## Запуск
+## ▶️ Запуск
 ```bash
 docker compose up --build
