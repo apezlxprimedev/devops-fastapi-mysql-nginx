@@ -1,6 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
   name: myapp
+
 spec:
   replicas: 3
+
+  selector:
+    matchLabels:
+      app: myapp
+
+  template:
+    metadata:
+      labels:
+        app: myapp
+
+    spec:
+      containers:
+        - name: myapp-container
+          image: myapp:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          env:
+            - name: APP_NAME
+              value: "k8s-app"

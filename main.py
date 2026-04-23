@@ -2,6 +2,7 @@
 from fastapi import FastAPI
 import mysql.connector
 import os
+import socket
 
 app = FastAPI()
 
@@ -27,4 +28,4 @@ def create_user( name : str ):
     
 @app.get("/")
 def read_root():
-    return {"message": f"Hello from {os.getenv('APP_NAME')}"}
+    return {"message": f"Hello from pod {socket.gethostname()}"}
